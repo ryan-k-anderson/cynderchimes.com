@@ -5,27 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cynder Chimes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+code+Pro:400,900|Source+Sans+Pro:300,900&display=swap">
+    <script src="https://kit.fontawesome.com/9b88399f7a.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-        <a href="employment.html">Employment</a>
-        <a href="contact.html">Contact</a>
-    </div><!--End Nav-->
-    <div id="main">
-        <div id="about">
-            <img src="#" alt="Self-Photo-Of-Ryan">
-            <br>
-            <br>
-            <h1>About Me</h1>
-            <p>My name is Ryan Anderson. I am from North East Ohio and a graduate from Coding Dojo. I specialize in Python programming. Been doing programming for a little over 2 years now and looking to expand my IT career into Networking Solutions as well. </p>
-        </div><!--End About-->
-        <div id="product">
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/cc_logo.png" alt="Cynder-Chimes-Logo">
+            </div><!--End Logo-->
+            <button class="nav-toggle" aria-label="toggle navigation" >
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html">Home</a></li>
+                    <li class="nav__item"><a href="education.html">Education</a></li>
+                    <li class="nav__item"><a href="employment.html">Employment</a></li>
+                    <li class="nav__item"><a href="projects.html">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        </div><!--End Product-->
-    </div><!--End Main-->
-</body>
+        <!-- Introduction-->
+        <section id="home" class="intro">
+            <h1 class="section__title section__tile--intro">
+                Hi I am <br><strong>Ryan Anderson</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Fullstack Dev</p>
+            <img class="intro__img" src="img/pfp1.jpg" alt="a-picture-of-Ryan-Anderson">
+        </section>
+
+        <!-- My Services -->
+        <section id="services" class="my-services">
+            <h2 class="section__title section__title--services"> What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Design + Development</h3>
+                    <p>Creating websites for the average consumer and bringing their ideas to life one keystroke at a time. See what you can imagine. Specialize in HTML, CSS, JS, Python, MySQL, Django, AWS</p>
+                </div><!-- / service -->
+                <div class="service">
+                    <h3>Network Solutions</h3>
+                    <p>Building simple network configurations is a new learning path I have been taking on the side to help better myself and be more rounded as an IT profesional. Currently working toward my Network+ and CCNA</p>
+                </div><!-- / service -->
+                <div class="service">
+                    <h3>E-Commerce</h3>
+                    <p>Online stores help you reach a wider audience. Got a craft, a product, works of art you want to put into the digital sector? See what I can do for you.</p>
+                </div><!-- / service -->
+            </div><!-- / services -->
+
+            <a href="projects.html" class="btn"> See My Work</a>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="about-me">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about">Designer & developer based out of Cleveland, OH</p>
+
+            <div class="about-me__body">
+                <p>Born in Jamestown, NY currently living in Cleveland, OH. Graduate from Jamestown Community College with an Associates in Applied Science with a Major in Welding.   </p>
+                <p>Career change in 2021 from welding to now IT and Web Development. Graduate of Coding Dojo and self taught developer and programmer. Taking courses on Udemy while reading literature on how to develop websites. My primary backend language is Python with Django, while also learning C# and Java</p>
+            </div><!-- / About Me Body-->
+
+            <img src="img/pfp2.jpg" alt="photo-of-Ryan-Anderson-2" class="about__me--img">
+        </section>
+
+
+        <section id="work" class="my-work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">Brief overview of what I have done</p>
+
+            <div class="portfolio">
+                <!-- Fortfolio item 01-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/html.png" alt="html5-logo" class="portfolio__img" width="300" height="300">
+                </a>
+
+                <!-- Fortfolio item 02-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/stock_1.jpg" alt="it-stock-photo" class="portfolio__img" width="300" height="300">
+                </a>
+
+                <!-- Fortfolio item 03-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/stock_2.jpg" alt="it-stock-photo" class="portfolio__img" width="300" height="300">
+                </a>
+
+                <!-- Fortfolio item 04-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/task_list.jpg" alt="task-list-stock-photo" class="portfolio__img" width="300" height="300">
+                </a>
+
+                <!-- Fortfolio item 05-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/css.jpg" alt="css3-logo" class="portfolio__img" width="300" height="300">
+                </a>
+            </div><!-- / Portfolio-->
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <a href="mailto:ryam.k.anderson2021@gmail.com" class="footer__link">ryan.k.anderson2021@gmail.com</a>
+            <ul class="social-list">
+                <li class="social__list--item">
+                    <a class="social__list--link" href="https://twitter.com/randersondev">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social__list--item">
+                    <a class="social__list--link" href="https://www.linkedin.com/in/ryan-anderson-7b971b183/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social__list--item">
+                    <a class="social__list--link" href="https://github.com/ryan-k-anderson">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </footer>
+    </body>
 </html>
