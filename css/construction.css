@@ -182,9 +182,8 @@ section{
     outline-offset: 3px;
 }
 
-/* Construction */
-section.construction h2{
-    text-align: center;
+span{
+    color: var(--clr-accent);
 }
 
 /* Footer */
@@ -198,8 +197,8 @@ footer{
 
 }
 
-.footer a {
-    color:inherit
+footer a {
+    color:var(--clr-accent);
 }
 
 .footer__link{

@@ -411,8 +411,8 @@ footer{
 
 }
 
-.footer a {
-    color:inherit
+footer a {
+    color:var(--clr-accent);
 }
 
 .footer__link{
