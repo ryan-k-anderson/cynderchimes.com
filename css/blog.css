@@ -1,0 +1,283 @@
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+/* Custom Properties Can Be Updated */
+
+:root{
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #cd00f7;
+
+    --fs-h1: 3rem;
+    --fs-h2:2.25rem;
+    --fs-h3:1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.125em rgba(0,0,0,.125)
+}
+
+@media (min-width: 800px){
+    :root{
+        --fs-h1:4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo{
+    width: 400px;
+    height: auto;
+    min-width: 265px;
+}
+
+.nav{
+    position: fixed;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5,0,.5,1);
+}
+
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link{
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover{
+    color: var(--clr-accent);
+}
+
+.nav-toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle{
+    position: fixed;
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before{
+    transform: rotate(90deg) translateX(-6px)
+}
+
+.nav-open .hamburger::after{
+    opacity: 0;
+}
+
+.hamburger{
+    display: block;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    background: var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {top: 6px;}
+.hamburger::after {bottom: 6px;}
+
+/* Intro Section */
+
+.intro__img{
+    box-shadow: var(--bs);
+}
+
+.intro{
+    position: relative;
+}
+
+.section__subtitle--intro{
+    display: inline-block;
+}
+
+/* General Styles */
+
+body{
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+strong{font-weight: var(--fw-bold)}
+
+section{
+    padding: 5em 2em;
+}
+
+:focus{
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+span{
+    color: var(--clr-accent);
+}
+
+/* Footer */
+
+footer{
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+footer a {
+    color:var(--clr-accent);
+}
+
+.footer__link{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+
+}
+
+.footer__link:hover,
+.social__list--link:hover{
+    opacity: .7;
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+}
+
+.social-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+    font-size: var(--fs-h3);
+
+}
+
+.social__list--item{
+    margin: 0 .5em;
+}
+
+.social__list--link{
+    padding:.5em;
+}
+
+/* Blog */
+.container{
+    width: 100%;
+}
+
+.container .row{
+    width: 80%;
+    margin: auto;
+}
+
+.container .row .header{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+
+}
+
+.container .row .header h1{
+    padding-top: 30px;
+    font-size: var(--fs-h1);
+    color: var(--clr-accent);
+}
+
+.container .row .header p{
+    margin-top: 15px;
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    color: var(--clr-light);
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.content img{
+    width: 100%;
+    height:auto;
+}
+.content .card{
+    flex: 1;
+    margin: 50px 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    background-color: var(--clr-dark);
+}
